@@ -2,17 +2,22 @@
 <html>
     <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>New Post</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     </head>
 
 
     <body>
+        <h1>Create new Post</h1>
+        <hr>
         <form>
-            <textarea name="text-input">Email and Additional Info</textarea>
-
+            <input type="text" id="title" placeholder="Title"><br>
+            <br>
+            <textarea name="text-input" placeholder="Text"></textarea>
             <br/>
+            <label for="tags">Add tags:</label><br>
+            <input type="text" id="tags" placeholder="#C++, #Python"><br><br>
             <input type="submit" />
         </form>
 
