@@ -1,11 +1,91 @@
 #content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+    height: 100vh;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.navbar {
+    width: 100%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+nav {
+    flex: 1;
+    padding-left: 60px;
+} 
+
+nav ul li {
+    font-family:"karla";
+    font-size: x-large;
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+a:link, a:visited {
+  background-color: #779be7;
+  color:white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+a:hover, a:active {
+  background-color: #90f1ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1 {
+    color:white;
+    padding: 12px 30px;
+    border-radius: 12px;
+    background-color:#97caed; 
+    font-family:"karla";
+    text-align:center;
+}
+
+p {
+    font-family:"karla";
+    font-size: x-large; 
+    text-align:left; 
+    color:#30343f;
+}
+
+.btn {
+  font-family: "karla";
+  border-radius: 10px;
+  background-color: #779be7;
+  color: white;
+  padding: 14px 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.info {
+  border-color: white;
+  color: white
 }
 
 #greeting-container {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 /* Always set the map height explicitly to define the size of the div
