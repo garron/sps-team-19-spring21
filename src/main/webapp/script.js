@@ -116,3 +116,14 @@ styles: [
     ],    
   });
 }
+
+//Datastore Code:
+/** Fetches tasks from the server and adds them to the DOM. */
+function loadTasks() {
+    fetch('/list-tutors').then(response => response.json()).then((tasks) => {
+        const taskListElement = document.getElementById('task-list');
+        tasks.forEach((task) => {
+            taskListElement.appendChild(createTaskElement(task));
+        })
+    });
+}
