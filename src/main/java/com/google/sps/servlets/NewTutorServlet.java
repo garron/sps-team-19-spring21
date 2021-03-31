@@ -14,7 +14,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
 
-@WebServlet("/sign-up")
+@WebServlet("/new-tutor")
 public class NewTutorServlet extends HttpServlet {
 
   @Override
@@ -40,6 +40,6 @@ public class NewTutorServlet extends HttpServlet {
             .build();
     datastore.put(taskEntity);
 
-    response.sendRedirect("/data.html");
+    response.sendRedirect("/sign-up.html");
   }
 }
