@@ -1,4 +1,4 @@
-package com.google.sps.servlets;
+package main.java.com.google.sps.servlets;
 
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
@@ -15,7 +15,7 @@ import org.jsoup.safety.Whitelist;
 
 
 @WebServlet("/sign-up")
-public class DataStoreServlet extends HttpServlet {
+public class NewTutorServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
