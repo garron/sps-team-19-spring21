@@ -116,3 +116,53 @@ styles: [
     ],    
   });
 }
+
+//Datastore Code:
+/** Fetches tasks from the server and adds them to the DOM. */
+function loadTutors() {
+    fetch('/list-tutors').then(response => response.json()).then((tasks) => {
+        const taskListElement = document.getElementById('task-list');
+        tasks.forEach((task) => {
+            taskListElement.appendChild(createTaskElement(task));
+        })
+    });
+}
+
+function createTaskElement(task) {
+    const taskElement = document.createElement('li');
+    taskElement.className = 'task';
+
+    const fnameElement = document.createElement('span');
+    fnameElement.innerText = task.fname;
+    const lnameElement = document.createElement('span');
+    lnameElement.innerText = task.lname;
+    const mailElement = document.createElement('span');
+    mailElement.innerText = task.mail;
+    const phoneElement = document.createElement('span');
+    phoneElement.innerText = task.phone;
+    const zipElement = document.createElement('span');
+    zipElement.innerText = task.zip;
+
+    const deleteButtonElement = document.createElement('button');
+    deleteButtonElement.innerText = 'Delete';
+    deleteButtonElement.addEventListener('click', () => {
+        deleteTask(task);
+
+        // Remove the task from the DOM.
+        taskElement.remove();
+    });
+
+    taskElement.appendChild(fnameElement);
+    taskElement.appendChild(lnameElement);
+    taskElement.appendChild(mailElement);
+    taskElement.appendChild(phoneElement);
+    taskElement.appendChild(zipElement);
+    taskElement.appendChild(deleteButtonElement);
+    return taskElement;
+}
+
+function deleteTask(task) {
+    const params = new URLSearchParams();
+    params.append('id', task.id);
+    fetch('/delete-tutor', {method: 'POST', body: params});
+}
