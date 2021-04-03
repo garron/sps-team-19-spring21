@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <hr />
+    <form method="POST" action="/new-tutor">
+        <label for="tags">First Name:</label><br />
+        <input type="text" id="fname" placeholder="First Name"><br />
+        <label for="tags">Last Name:</label><br />
+        <input type="text" id="lname" placeholder="Last Name"><br />
+        <label for="tags">Email Address:</label><br />
+        <input type="email" id="mail" placeholder="johndoe@gmail.com"><br />
+        <label for="tags">Phone Number:</label><br />
+        <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br />
+        <label for="tags">Zip Code:</label><br />
+        <input type="number" id="zip" placeholder="00000"><br />
+        <br />
+        <input type="submit" />
+    </form>
+
+    <br>
+    <hr>
+
+
+    <button onclick="loadTutors();" >Get List of Tutors</button>
+    <ul id="task-list"></ul>
+
+    
+</body>
+</html>

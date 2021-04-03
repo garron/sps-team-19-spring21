@@ -16,7 +16,7 @@
 
     <!-- Project-specific properties -->
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
-    <googleCloudProjectId>spring21-sps-36</googleCloudProjectId>
+    <googleCloudProjectId>spring21-sps-19</googleCloudProjectId>
   </properties>
 
   <dependencies>
@@ -38,6 +38,22 @@
       <artifactId>jetty-annotations</artifactId>
       <version>${jetty.version}</version>
     </dependency>
+
+    <!--Datastore-->
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-datastore</artifactId>
+        <version>1.104.0</version>
+    </dependency>
+
+    <!-- jsoup -->
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.8.3</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
