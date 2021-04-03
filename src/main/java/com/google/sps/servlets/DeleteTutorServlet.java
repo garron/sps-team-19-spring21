@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Servlet responsible for deleting tasks. */
-@WebServlet("/delete-tutor")
+@WebServlet("/delete-tutors")
 public class DeleteTutorServlet extends HttpServlet {
 
   @Override
