@@ -1,4 +1,4 @@
-package main.java.com.google.sps.servlets;
+package com.google.sps.servlets;
 
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
@@ -40,6 +40,6 @@ public class NewTutorServlet extends HttpServlet {
             .build();
     datastore.put(taskEntity);
 
-    response.sendRedirect("/sign-up.html");
+    response.sendRedirect("/sign_up.html");
   }
 }
