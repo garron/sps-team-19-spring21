@@ -40,6 +40,6 @@ public class NewTutorServlet extends HttpServlet {
             .build();
     datastore.put(taskEntity);
 
-    response.sendRedirect("/sign_up.html");
+    response.sendRedirect("/sign-up.html");
   }
 }
