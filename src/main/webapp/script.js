@@ -128,6 +128,7 @@ function loadTutors() {
     });
 }
 
+/** Creates an element that represents a task, including its delete button. */
 function createTaskElement(task) {
     const taskElement = document.createElement('li');
     taskElement.className = 'task';
@@ -146,7 +147,7 @@ function createTaskElement(task) {
     const deleteButtonElement = document.createElement('button');
     deleteButtonElement.innerText = 'Delete';
     deleteButtonElement.addEventListener('click', () => {
-        deleteTask(task);
+        deleteTutors(task);
 
         // Remove the task from the DOM.
         taskElement.remove();
@@ -161,8 +162,9 @@ function createTaskElement(task) {
     return taskElement;
 }
 
-function deleteTask(task) {
+/** Tells the server to delete the task. */
+function deleteTutors(task) {
     const params = new URLSearchParams();
     params.append('id', task.id);
-    fetch('/delete-tutor', {method: 'POST', body: params});
+    fetch('/delete-tutors', {method: 'POST', body: params});
 }

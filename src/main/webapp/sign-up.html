@@ -1,36 +1,117 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tutoring Web App</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet"/>
     <script src="script.js"></script>
-</head>
-<body>
-    <h1>Sign Up</h1>
-    <hr />
-    <form method="POST" action="/new-tutor">
-        <label for="tags">First Name:</label><br />
-        <input type="text" id="fname" placeholder="First Name"><br />
-        <label for="tags">Last Name:</label><br />
-        <input type="text" id="lname" placeholder="Last Name"><br />
-        <label for="tags">Email Address:</label><br />
-        <input type="email" id="mail" placeholder="johndoe@gmail.com"><br />
-        <label for="tags">Phone Number:</label><br />
-        <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br />
-        <label for="tags">Zip Code:</label><br />
-        <input type="number" id="zip" placeholder="00000"><br />
-        <br />
-        <input type="submit" />
-    </form>
+  </head>
+  <body>
+      <!-- Navigation Bar -->
+         <div class="navbar"> 
+            <ul>
+                <li><a href="index.html">📚 Home</a></li>
+                <li><a href="about.html">🔎 About</a></li>
+                <li><a class="active" href="sign_up.html">🧑‍🏫  Become a tutor</a></li>
+                <li><a href="find_tutor.html">📍 Find a tutor</a></li>
+            </ul>
+        </div>
 
-    <br>
-    <hr>
+        <div id="content">
+
+            <h1>Sign Up</h1>
+            <h1> ✅ Who are tutors? </h1>
+                <p> The tutors are other students from different areas with the desire 
+                    to support in subjects that could be difficult, so the tutors support 
+                    through classes, they provide resources to support other students.
+                </p>
+            <h1> 🖍 Who can be a tutor? </h1>
+            <p> 
+                Anyone with schedule availability and willingness to teach can be a tutor. 
+            </p>
+
+            <div class="row">
+                    <div class="column">
+                        <img src="/images/students/1.png" alt="Students1" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="/images/students/2.png" alt="Students2" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="/images/students/3.png" alt="Students3" style="width:100%">
+                    </div>
+            </div>
+
+            <h1> 📥 Become a tutor today and start sharing ! </h1>
+            
+            <div class="container">
+                <form method="POST" action="/new-tutor">
+                    <div class="row">
+                        <div class="col-25">
+                        <label for="tags">First Name</label>
+                        </div>
+                        <div class="col-75">
+                        <input type="text" id="fname" name="fname" placeholder="Your name...">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                        <label for="tags">Last Name</label>
+                        </div>
+                        <div class="col-75">
+                        <input type="text" id="lname" name="lname" placeholder="Your last name...">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                        <label for="tags">Email address</label>
+                        </div>
+                        <div class="col-75">
+                        <input type="email" id="mail" name="mail" placeholder="Example: johndoe@gmail.com">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                        <label for="tags">Phone number</label>
+                        </div>
+                        <div class="col-75">
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                        <label for="tags">Zip code</label>
+                        </div>
+                        <div class="col-75">
+                        <input type="number" id="zip" name="zip" placeholder="00000">
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Submit"/>
+
+                </form>
+
+                <button onclick="loadTutors();">Get List of Tutors</button>
+                <ul id="task-list"></ul>
+
+            </div>
 
 
-    <button onclick="loadTutors();" >Get List of Tutors</button>
-    <ul id="task-list"></ul>
+        </div>
+
+        <div class="footer-basic">
+            <footer>
+                <p class="copyright">For any questions, comments or suggestions please feel free to contact us at example@example.com </p>
+                <p class="copyright">Tutoring Web App © 2021</p>
+            </footer>
+        </div>
+
+
+    </body>
 
     
-</body>
 </html>
