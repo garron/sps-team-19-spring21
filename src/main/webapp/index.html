@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Tutoring Web App</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet"/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet" />
     <script src="script.js"></script>
-  </head>
-
-  <body>
+</head>
+<body>
     <!-- Navigation Bar -->
-         <div class="navbar"> 
-            <ul>
-                <li><a class="active" href="index.html">📚 Home</a></li>
-                <li><a href="about.html">🔎 About</a></li>
-                <li><a href="sign-up.html">🧑‍🏫  Become a tutor</a></li>
-                <li><a href="find_tutor.html">📍 Find a tutor</a></li>
-            </ul>
-        </div>
+    <div class="navbar">
+        <ul>
+            <li><a class="active" href="index.html">📚 Home</a></li>
+            <li><a href="about.html">🔎 About</a></li>
+            <li><a href="sign-up.html">🧑‍🏫 Become a tutor</a></li>
+            <li><a href="find-tutor.html">📍 Find a tutor</a></li>
+        </ul>
+    </div>
 
     <!-- Slideshow container -->
     <div>
@@ -26,43 +25,44 @@
         <img class="mySlides" src="images/slides/2.png" style="height:auto;width:100%">
         <img class="mySlides" src="images/slides/3.png" style="height:auto;width:100%">
     </div>
-        
-    <div id = "content">      
-        <h1> Welcome to our tutoring web app! 😄  </h1>
 
-        <p> We are a group of students looking to provide an alternative online tutoring for 
-            local and international students in a harmonious and friendly environment. So that 
+    <div id="content">
+        <h1> Welcome to our tutoring web app! 😄 </h1>
+
+        <p> We are a group of students looking to provide an alternative online tutoring for
+            local and international students in a harmonious and friendly environment. So that
             students who require it can have access to a tutorial or register to be a tutor and help others! </p>
 
         <h1> Join our community! </h1>
-        <h1> 
-            <a id="boton" href="sign_up.html">Sign Up 🚀</a> 
-            <a id="boton" href="find_tutor.html">Find a tutor 🧭</a> 
+        <h1>
+            <a id="boton" href="sign-up.html">Sign Up 🚀</a>
+            <a id="boton" href="find-tutor.html">Find a tutor 🧭</a>
         </h1>
     </div>
 
     <div class="footer-basic">
         <footer>
-            <p class="copyright">For any questions, comments or suggestions please feel free to contact us at example@example.com </p>
+            <p class="copyright">
+                For any questions, comments or suggestions please feel free to contact us at example@sps-gmail.com
+            </p>
             <p class="copyright">Tutoring Web App © 2021</p>
         </footer>
     </div>
-    
+
     <script>
         var myIndex = 0;
         carousel();
         function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-        }
-        myIndex++;
-        if (myIndex > x.length) {myIndex = 1}    
-        x[myIndex-1].style.display = "block";  
-        setTimeout(carousel, 2500); 
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2500);
         }
     </script>
-
-  </body>
+</body>
 </html>
