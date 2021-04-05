@@ -13,35 +13,23 @@
     <div class="navbar">
         <ul>
             <li><a href="index.html">📚 Home</a></li>
-            <li><a class="active" href="about.html">🔎 About</a></li>
+            <li><a href="about.html">🔎 About</a></li>
             <li><a href="sign-up.html">🧑‍🏫 Become a tutor</a></li>
-            <li><a href="find-tutor.html">📍 Find a tutor</a></li>
+            <li><a class="active" href="find-tutor.html">📍 Find a tutor</a></li>
         </ul>
     </div>
 
     <div id="content">
-        <h1> 📌 About us </h1>
-
-        <h1> 📌 Our goal </h1>
-        <p>
-            Our page aims to connect local and international
-            students with tutors to get support in activities or tasks.
-            Also people who are interested in being tutors can subscribe their information.
-        </p>
-
-        <div class="row">
-            <div class="column">
-                <img src="/images/students/5.png" alt="Students1" style="width:100%">
-            </div>
-            <div class="column">
-                <img src="/images/students/6.png" alt="Students2" style="width:100%">
-            </div>
-            <div class="column">
-                <img src="/images/students/7.png" alt="Students3" style="width:100%">
-            </div>
-        </div>
+        <h1> Mapa </h1>
+        <h1>🗺 Map </h1>
+        <p> In this map you can see tutors near you </p>
     </div>
 
+    <!-- Div containing the Google Map -->
+    <div id="map"></div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkSBbgA6pMgnZkO4E0uZoaf-xU5LeUdfE&callback=initMap&libraries=&v=weekly" async></script>
+    
     <div class="footer-basic">
         <footer>
             <p class="copyright">
