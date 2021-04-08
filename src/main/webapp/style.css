@@ -1,21 +1,14 @@
-#content {
-    height: auto;
-    width: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #BBD1EA;
-}
-#greeting-container {
-    margin-top: 20px;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #24305E;
 }
 
 /* Navigation bar
 Color palette: A8D0E6 F8E9A1 374785 F76C6C */
-body {
-    background-color: #24305E;
-    margin:0;
-}
-ul {
+ul#navigarion-bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -26,11 +19,11 @@ ul {
   width: 100%;
 }
 
-li {
+li.nav-links {
   float: left;
 }
 
-li a {
+li.nav-links a {
   display: block;
   color: white;
   text-align: center;
@@ -40,13 +33,21 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li.nav-links a:hover:not(.active) {
   background-color: #24305E;
 }
 
-.active {
+li.nav-links a.active {
   background-color: #BBD1EA;
   color: #24305E;
+}
+
+#content {
+  height: auto;
+  width: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #BBD1EA;
 }
 
 /* Images in a row */
@@ -65,37 +66,40 @@ li a:hover:not(.active) {
   clear: both;
   display: table;
 }
+
 /* Heading 1 */
 h1 {
-    color:#24305E;
-    margin: 0;
-    padding: 12px 30px;
-    border-radius: 12px;
-    font-family:"Sniglet";
-    text-align:center;
-}
-/* Paragraph */
-p {
-    font-family:"sniglet";
-    font-size: 21px; 
-    text-align:justify; 
-    color:#30343f;
-}
-/* boton */
-#boton:link, #boton:visited {
-    font-family: "sniglet";
-    border-radius: 10px;
-    background-color: #F8E9A1;
-    color: #30343f;
-    padding: 20px 35px;
-    text-align: center;
-    font-size: 22px;
-    text-decoration: none;
-    display: inline-block;
-    align-items: center;
+  color:#24305E;
+  margin: 0;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-family:"Sniglet";
+  text-align:center;
 }
 
-#boton:hover, #boton:active {
+/* Paragraph */
+p {
+  font-family:"sniglet";
+  font-size: 21px; 
+  text-align:justify; 
+  color:#30343f;
+}
+
+/* boton */
+.button-link:link, .button-link:visited {
+  font-family: "sniglet";
+  border-radius: 10px;
+  background-color: #F8E9A1;
+  color: #30343f;
+  padding: 20px 35px;
+  text-align: center;
+  font-size: 22px;
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+}
+
+.button-link:hover, .button-link:active {
   font-family: "sniglet";
   border-radius: 10px;
   background-color: #374785;
@@ -122,8 +126,16 @@ p {
   color:white;
   margin-bottom:0;
 }
+
+div.contain-button {
+  display: flex; 
+  align-items: center;
+  justify-content: center;   
+}
+
 /* Input button */
-input[type=submit] {
+input[type=submit], button#display {
+  width: 15%;    
   background-color: #98ce00;
   font-family: "sniglet";
   border: none;
@@ -132,10 +144,13 @@ input[type=submit] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px;
 }
-input[type=submit]:hover {
+
+input[type=submit]:hover, button#display:hover {
   background-color: #45a049;
 }
+
 /* form styling */
 input[type=text], input[type=email], input[type=tel], input[type=number] {
   width: 100%;
@@ -146,32 +161,38 @@ input[type=text], input[type=email], input[type=tel], input[type=number] {
   font-size:19px;
   resize: vertical;
 }
+
 label {
   padding: 12px 12px 12px 0px;
   display: inline-block;
 }
+
 .container {
-    font-family: "sniglet";
-    font-size: 19px;
-    background-color: #fbe093;
-    border-radius: 5px;
-    padding: 20px;
+  font-family: "sniglet";
+  font-size: 19px;
+  background-color: #fbe093;
+  border-radius: 5px;
+  padding: 20px;
 }
+
 .col-25 {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
+
 .col-75 {
   float: left;
   width: 75%;
   margin-top: 6px;
 }
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
@@ -179,18 +200,15 @@ label {
   }
 }
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
 #map {
   height: 100%;
 }
 
-/* Optional: Makes the sample page fill the window. */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+#map {
+  height: 470px;
+  width: 800px;
+  display: block;
+  margin: 0 auto;
 }
 
 #task-list {
