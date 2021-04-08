@@ -72,28 +72,29 @@
                         <label for="tags">Phone number</label>
                     </div>
                     <div class="col-75">
-                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-25">
-                        <label for="tags">Zip code</label>
+                        <label for="tags">Address</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" id="zip" name="zip" placeholder="00000">
+                        <input type="text" id="address" name="address" placeholder="location, zipcode">
                     </div>
                 </div>
                 <div class="contain-button">
-                    <input type="submit" value="Submit" />
+                    <input type="submit" id="submit" value="Submit" />
                 </div>
             </form>
             <div class="contain-button">
                 <button id="display" onclick="loadTutors();">Get List of Tutors</button>
             </div>
+            <!-- Display the list of registered tutors -->
             <div id="task-list"></div>
         </div>
     </div>
+    <!-- Footer -->
     <div class="footer-basic">
         <footer>
             <p class="copyright">

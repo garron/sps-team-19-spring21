@@ -20,6 +20,7 @@ ul#navigarion-bar {
 }
 
 li.nav-links {
+  /* list-style-type: none; */
   float: left;
 }
 
@@ -48,6 +49,7 @@ li.nav-links a.active {
   padding-left: 5%;
   padding-right: 5%;
   background-color: #BBD1EA;
+  display: block;
 }
 
 /* Images in a row */
@@ -72,7 +74,7 @@ h1 {
   color:#24305E;
   margin: 0;
   padding: 12px 30px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   font-family:"Sniglet";
   text-align:center;
 }
@@ -152,7 +154,7 @@ input[type=submit]:hover, button#display:hover {
 }
 
 /* form styling */
-input[type=text], input[type=email], input[type=tel], input[type=number] {
+input[type=text], input[type=email], input[type=tel], input[type=text] {
   width: 100%;
   font-family: "sniglet";
   padding: 12px;
@@ -210,6 +212,20 @@ label {
   display: block;
   margin: 0 auto;
 }
+
+/* #floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: "Roboto", "sans-serif";
+  line-height: 30px;
+  padding-left: 10px;
+} */
 
 #task-list {
   list-style-type: none;
