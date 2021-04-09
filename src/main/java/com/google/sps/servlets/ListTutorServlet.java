@@ -23,8 +23,7 @@ public class ListTutorServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-        Query<Entity> query =
-            Query.newEntityQueryBuilder().setKind("Task").setOrderBy(OrderBy.asc("timestamp")).build();
+        Query<Entity> query = Query.newEntityQueryBuilder().setKind("Task").setOrderBy(OrderBy.asc("timestamp")).build();
         QueryResults<Entity> results = datastore.run(query);
 
         List<Task> tasks = new ArrayList<>();
@@ -36,10 +35,10 @@ public class ListTutorServlet extends HttpServlet {
             String lname = entity.getString("lname");
             String mail = entity.getString("mail");
             String phone = entity.getString("phone");
-            String zip = entity.getString("zip");
+            String address = entity.getString("address");
             long timestamp = entity.getLong("timestamp");
 
-            Task task = new Task(id, fname, lname, mail, phone, zip, timestamp);
+            Task task = new Task(id, fname, lname, mail, phone, address, timestamp);
             tasks.add(task);
         }
 

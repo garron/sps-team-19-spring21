@@ -24,7 +24,7 @@ public class NewTutorServlet extends HttpServlet {
     String lname = Jsoup.clean(request.getParameter("lname"), Whitelist.none());
     String mail = Jsoup.clean(request.getParameter("mail"), Whitelist.none());
     String phone = Jsoup.clean(request.getParameter("phone"), Whitelist.none());
-    String zip = Jsoup.clean(request.getParameter("zip"), Whitelist.none());
+    String address = Jsoup.clean(request.getParameter("address"), Whitelist.none());
     long timestamp = System.currentTimeMillis();
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
@@ -35,7 +35,7 @@ public class NewTutorServlet extends HttpServlet {
             .set("lname", lname)
             .set("mail", mail)
             .set("phone", phone)
-            .set("zip", zip)
+            .set("address", address)
             .set("timestamp", timestamp)
             .build();
     datastore.put(taskEntity);
