@@ -12,28 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
-
 // Implementation of Google Map
 let map;
 
 function initMap() {
+  const school = { lat: 35.65694851772671, lng: -97.47422897682051 };
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 35.65694851772671, lng: -97.47422897682051 },
+    center: school,
     zoom: 16,
+  });
+  new google.maps.Marker({
+    position: school,
+    map,
+    title: "Hello World!",
   });
   const geocoder = new google.maps.Geocoder();
   document.getElementById("submit").addEventListener("click", () => {
